@@ -3726,7 +3726,7 @@ export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig
 # Local variables:
 # mode: sh
 # End:
-source /opt/ros/kinetic/setup.zsh
+#source /opt/ros/kinetic/setup.zsh
 # Enable Ctrl-x-e to edit command line
 autoload -U edit-command-line
 # Emacs style

@@ -91,11 +91,11 @@ let airline#extensions#ale#warning_symbol = 'W:'
 
 
 " Clang Format
-map <C-K> :pyf /usr/share/clang/clang-format-6.0/clang-format.py<cr>
-imap <C-K> <c-o>:pyf /usr/share/clang/clang-format-6.0/clang-format.py<cr>
+map <C-K> :pyf /usr/share/clang/clang-format-8/clang-format.py<cr>
+imap <C-K> <c-o>:pyf /usr/share/clang/clang-format-8/clang-format.py<cr>
 function! Formatonsave()
   let l:formatdiff = 1
-  pyf /usr/share/clang/clang-format-6.0/clang-format.py
+  pyf /usr/share/clang/clang-format-8/clang-format.py
 endfunction
 autocmd BufWritePre *.h,*.cc,*.cpp call Formatonsave()
 
