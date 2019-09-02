@@ -358,7 +358,10 @@ zrcautoload is-at-least || function is-at-least () { return 1 }
 
 # append history list to the history file; this is the default but we make sure
 # because it's required for share_history.
-setopt append_history
+HISTFILE=~/.zsh_history
+HISTSIZE=10000
+SAVEHIST=1000
+setopt INC_APPEND_HISTORY_TIME
 
 # import new commands from the history file also in other zsh-session
 is4 && setopt share_history
