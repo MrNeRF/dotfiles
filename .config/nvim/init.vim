@@ -1,7 +1,9 @@
 filetype on
+set nocompatible
+filetype plugin on
+syntax on
 
 call plug#begin('~/.vim/plugged')
-	Plug 'MaskRay/ccls'
 	Plug 'Valloric/YouCompleteMe'
 	Plug 'rdnetto/YCM-Generator'
 	Plug 'Shougo/neoinclude.vim'
@@ -25,6 +27,7 @@ call plug#begin('~/.vim/plugged')
 	Plug 'ncm2/ncm2-jedi'
 	Plug 'tpope/vim-commentary'
 	Plug 'tpope/vim-unimpaired' 
+	Plug 'scrooloose/nerdtree'
 	" Formater
 	Plug 'Chiel92/vim-autoformat'
 	"Vimwiki
@@ -103,3 +106,7 @@ autocmd BufWritePre *.h,*.cc,*.cpp call Formatonsave()
 let g:vimwiki_ext2syntax = {'.md': 'markdown', '.markdown': 'markdown', '.mdown': 'markdown'}
 let g:vimwiki_list = [{'path': '~/vimwiki/','syntax': 'markdown', 'ext': '.md'}]
 map <leader>md :MarkdownPreview<CR>
+
+
+"nerdtree
+map <leader>nt :NERDTree<CR>
