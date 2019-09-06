@@ -12,7 +12,6 @@ call plug#begin('~/.vim/plugged')
 	Plug 'jiangmiao/auto-pairs'
 	Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 	Plug 'junegunn/fzf.vim'
-	Plug 'machakann/vim-highlightedyank'
 	" Better Visual Guide
 	Plug 'Yggdroot/indentLine'
 	" syntax check
@@ -57,7 +56,6 @@ set cursorline
 set shiftround					" use multiple of shiftwidth when indenting with '<' and '>'
 set showmatch					" set show matching parenthesis
 set ignorecase smartcase		" ignore case if search pattern is all lowercase,
-set inccommand=nosplit
 set noexpandtab
 set smarttab					" insert tabs on the start of a line according to
 set hlsearch					" highlight search terms
