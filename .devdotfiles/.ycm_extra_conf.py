@@ -39,8 +39,6 @@ flags = [
     '-D_GLIBCXX_DEBUG',
     '-isystem', '/usr/local/include',
     '-isystem', '/usr/include/c++/9',
-    '-I/home/paja/project/imageprocessing/3rdParties/Eigen',
-    '-I/home/paja/project/imageprocessing/include',
     '-Wall',
     '-Wno-write-strings',
     '-std=c++17',
