@@ -28,11 +28,14 @@ call plug#begin('~/.vim/plugged')
 	Plug 'ncm2/ncm2-jedi'
 	Plug 'tpope/vim-commentary'
 	Plug 'tpope/vim-unimpaired' 
+	Plug 'scrooloose/nerdtree'
 	" Formater
 	Plug 'Chiel92/vim-autoformat'
 	"Vimwiki
 	Plug 'vimwiki/vimwiki'
 	Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
+	"latex
+	Plug 'lervag/vimtex'
 	call plug#end()
 
 " colorscheme
@@ -50,6 +53,7 @@ set laststatus=2
 set nowrap						" don't wrap lines
 set tabstop=4					" a tab is four spaces
 set backspace=indent,eol,start "		 allow backspacing over everything in insert mode
+"set isfname
 set softtabstop=4
 set ruler
 set autoindent					" always set autoindenting on
@@ -111,3 +115,8 @@ map <leader>md :MarkdownPreview<CR>
 
 "nerdtree
 map <leader>nt :NERDTree<CR>
+"term
+map <leader>tm :edit term=://zsh<CR>
+
+"latex
+let g:vimtex_view_method = 'zathura'
