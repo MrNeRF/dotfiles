@@ -15,6 +15,7 @@ call plug#begin('~/.vim/plugged')
 	Plug 'jiangmiao/auto-pairs'
 	Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 	Plug 'junegunn/fzf.vim'
+	Plug 'machakann/vim-highlightedyank'
 	" Better Visual Guide
 	Plug 'Yggdroot/indentLine'
 	" syntax check
@@ -33,6 +34,8 @@ call plug#begin('~/.vim/plugged')
 	"Vimwiki
 	Plug 'vimwiki/vimwiki'
 	Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
+	"latex
+	Plug 'lervag/vimtex'
 	call plug#end()
 
 " colorscheme
@@ -50,7 +53,9 @@ set laststatus=2
 set nowrap						" don't wrap lines
 set tabstop=4					" a tab is four spaces
 set backspace=indent,eol,start "		 allow backspacing over everything in insert mode
+"set isfname
 set softtabstop=4
+set ruler
 set autoindent					" always set autoindenting on
 set copyindent					" copy the previous indentation on autoindenting
 set number						" always show line numbers
@@ -58,8 +63,8 @@ set shiftwidth=4				" number of spaces to use for autoindenting
 set cursorline
 set shiftround					" use multiple of shiftwidth when indenting with '<' and '>'
 set showmatch					" set show matching parenthesis
-set ignorecase					" ignore case when searching
-set smartcase					" ignore case if search pattern is all lowercase,
+set ignorecase smartcase		" ignore case if search pattern is all lowercase,
+set inccommand=nosplit
 set noexpandtab
 set smarttab					" insert tabs on the start of a line according to
 set hlsearch					" highlight search terms
@@ -69,7 +74,7 @@ set undolevels=1000     			" use many muchos levels of undo
 set wildignore=*.swp,*.bak,*.pyc,*.class
 set wildmenu
 set wildmode=full
-set title               			" change the terminal's title set visualbell          			" don't beep set noerrorbells        			" don't beep
+set title               		" change the terminal's title set visualbell
 set relativenumber
 set nocompatible				" be iMproved, required
 "set colorcolumn=80
@@ -110,3 +115,8 @@ map <leader>md :MarkdownPreview<CR>
 
 "nerdtree
 map <leader>nt :NERDTree<CR>
+"term
+map <leader>tm :edit term=://zsh<CR>
+
+"latex
+let g:vimtex_view_method = 'zathura'
