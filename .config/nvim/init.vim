@@ -22,6 +22,7 @@ call plug#begin('~/.vim/plugged')
 	"Plug 'w0rp/ale'
 	" Autocomplete
 	Plug 'ncm2/ncm2'
+	Plug 'ericcurtin/CurtineIncSw.vim'
 	Plug 'roxma/nvim-yarp'
 	Plug 'ncm2/ncm2-bufword'
 	Plug 'ncm2/ncm2-path'
@@ -120,3 +121,6 @@ map <leader>tm :edit term=://zsh<CR>
 
 "latex
 let g:vimtex_view_method = 'zathura'
+
+"switch Header/Source
+map <F5> :call CurtineIncSw()<CR>
