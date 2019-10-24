@@ -22,6 +22,7 @@ call plug#begin('~/.vim/plugged')
 	"Plug 'w0rp/ale'
 	" Autocomplete
 	Plug 'ncm2/ncm2'
+	Plug 'ericcurtin/CurtineIncSw.vim'
 	Plug 'roxma/nvim-yarp'
 	Plug 'ncm2/ncm2-bufword'
 	Plug 'ncm2/ncm2-path'
@@ -63,8 +64,8 @@ set shiftwidth=4				" number of spaces to use for autoindenting
 set cursorline
 set shiftround					" use multiple of shiftwidth when indenting with '<' and '>'
 set showmatch					" set show matching parenthesis
-set ignorecase					" ignore case when searching
-set smartcase					" ignore case if search pattern is all lowercase,
+set ignorecase smartcase		" ignore case if search pattern is all lowercase,
+set inccommand=nosplit
 set noexpandtab
 set smarttab					" insert tabs on the start of a line according to
 set hlsearch					" highlight search terms
@@ -120,3 +121,6 @@ map <leader>tm :edit term=://zsh<CR>
 
 "latex
 let g:vimtex_view_method = 'zathura'
+
+"switch Header/Source
+map <F5> :call CurtineIncSw()<CR>
