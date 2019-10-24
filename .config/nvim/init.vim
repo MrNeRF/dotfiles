@@ -63,8 +63,8 @@ set shiftwidth=4				" number of spaces to use for autoindenting
 set cursorline
 set shiftround					" use multiple of shiftwidth when indenting with '<' and '>'
 set showmatch					" set show matching parenthesis
-set ignorecase smartcase		" ignore case if search pattern is all lowercase,
-set inccommand=nosplit
+set ignorecase					" ignore case when searching
+set smartcase					" ignore case if search pattern is all lowercase,
 set noexpandtab
 set smarttab					" insert tabs on the start of a line according to
 set hlsearch					" highlight search terms
@@ -74,7 +74,7 @@ set undolevels=1000     			" use many muchos levels of undo
 set wildignore=*.swp,*.bak,*.pyc,*.class
 set wildmenu
 set wildmode=full
-set title               		" change the terminal's title set visualbell
+set title               			" change the terminal's title set visualbell          			" don't beep set noerrorbells        			" don't beep
 set relativenumber
 set nocompatible				" be iMproved, required
 "set colorcolumn=80
